@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "Set-Location 'c:\\Users\\palma\\Downloads\\projetoclaudecode'; $changed = git status --porcelain; if ($changed) { git add -A; $ts = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'; git commit -m \"auto: sync changes $ts\"; git push origin HEAD } 2>$null",
+            "timeout": 30,
+            "statusMessage": "Sincronizando com GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
