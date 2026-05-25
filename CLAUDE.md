@@ -30,3 +30,18 @@ Data flow: `app.py` calls `fetch_stocks` → passes result to `calc_performance`
 
 1. Add an entry to `TICKERS` and `COLORS` in `data.py`.
 2. No changes needed in `charts.py` or `app.py` — both iterate over DataFrame columns dynamically.
+
+## GitHub repository
+
+Repository: `https://github.com/larentispedro/b3-dashboard`
+
+**Auto-sync**: Every time Claude edits a file (Edit or Write tool), a PostToolUse hook in `.claude/settings.json` automatically commits and pushes to GitHub with a message like `auto: sync changes YYYY-MM-DD HH:MM:SS`.
+
+**Manual sync**: If you edit files outside Claude, run:
+```
+git add -A
+git commit -m "sua mensagem"
+git push origin master
+```
+
+**GitHub CLI**: Installed at `C:\Program Files\GitHub CLI\gh.exe`. Authenticated as `larentispedro`.
